@@ -2,7 +2,7 @@ body {
     padding: 10px 60px;
     background-color: #1a1a1a;
     color: white;
-    background: linear-gradient(to bottom, #1a1a1a, #1c0b1e);
+    background: linear-gradient(to bottom, #000000, #0b060c);
 }
 
 img {
@@ -55,3 +55,23 @@ footer {
     transition: opacity 2s ease, transform 2s ease;
 }
 
+.shooting-star {
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(to right, white, transparent);
+    border-radius: 50%;
+    opacity: 0;
+    z-index: -1;
+}
+
+@keyframes shoot {
+    0% {
+        transform: translate(0, 0) rotate(45deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(400px, 400px) rotate(45deg);
+        opacity: 0;
+    }
+}

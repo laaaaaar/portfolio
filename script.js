@@ -30,3 +30,19 @@ for (let i = 0; i < 100; i++) {
     stars.push(star);
 }
 
+function spawnShootingstar() {
+    let shootingStar = document.createElement("div");
+    shootingStar.classList.add("shooting-star");
+    shootingStar.style.left = Math.random() * window.innerWidth + "px";
+    shootingStar.style.top = Math.random() * (window.innerHeight / 2) + "px"; // Spawn in the upper half of the screen
+    shootingStar.style.animation = "shoot 1.5s ease-out forwards";
+
+    document.body.appendChild(shootingStar);
+
+    setTimeout(() => {
+        shootingStar.remove();
+    }, 1500); // Remove the shooting star after the animation duration
+}
+
+setInterval(spawnShootingstar, 5000); // Spawn a shooting star every 5 seconds
+
