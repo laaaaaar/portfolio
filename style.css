@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
 body {
     padding: 10px 60px;
     background-color: #07070c;
+    font-family: 'JetBrains Mono', monospace;
     color: white;
     background-image:
         radial-gradient(circle at 20% 15%, rgba(124, 92, 255, 0.20), rgba(124, 92, 255, 0.1), transparent 60%),
@@ -21,12 +24,35 @@ img {
 }
 
 .start-button {
+    position: relative;
     display: inline-block;
     background-color: black;
     color: white;
-    padding: 12px 24px;
+    padding: 20px 45px;
     border-radius: 8px;
     text-decoration: none;
+    overflow: hidden;
+    isolation: isolate;
+}
+
+.start-button:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: conic-gradient(from 0deg, #7c5cff, #e8607a, #7c5cff);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.start-button:hover::before {
+    opacity: 1;
+    animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+    from { filter: hue-rotate(0deg); }
+    to { filter: hue-rotate(360deg); }
 }
 
 .about-intro {
