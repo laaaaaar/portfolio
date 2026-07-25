@@ -12,20 +12,15 @@ for (let i = 0; i < 100; i++) {
     let randomColor = colors[Math.floor(Math.random() * colors.length)];
     star.style.backgroundColor = randomColor;
 
+    if (Math.random() < 0.5) {
+        let duration = (Math.random() * 3 + 2).toFixed(1);
+        let delay = (Math.random() * 3).toFixed(1);
+        star.style.animation = `twinkle ${duration}s infinite`;
+        star.style.animationDelay = `${delay}s`;
+    }
+
+
     document.body.appendChild(star);
     stars.push(star);
 }
 
-function twinkleSomeStars() {
-    for (let i = 0; i < stars.length; i++) {
-        let star = stars[i];
-        if (Math.random() < 0.2) { // 20% chance to twinkle
-            star.style.animation = "twinkle 3s infinite";
-         } else {
-            star.style.animation = ""; // none
-        }
-    }
-}
-
-// Call the twinkleSomeStars function every 2 seconds
-setInterval(twinkleSomeStars, 2000);
