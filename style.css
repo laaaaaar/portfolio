@@ -52,19 +52,6 @@ footer {
     background-color: rgb(196, 122, 196);
     border-radius: 50%;
     z-index: -1;
+    transition: opacity 2s ease, transform 2s ease;
 }
 
-@keyframes twinkle {
-    0% {
-        opacity: 0.2;
-        transform: scale(1);
-    }
-    50% {
-        opacity: 1;
-        transform: scale(1.5);
-    }
-    100% {
-        opacity: 0.2;
-        transform: scale(1);
-    }
-}

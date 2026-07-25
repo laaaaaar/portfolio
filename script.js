@@ -12,12 +12,18 @@ for (let i = 0; i < 100; i++) {
     let randomColor = colors[Math.floor(Math.random() * colors.length)];
     star.style.backgroundColor = randomColor;
 
-    if (Math.random() < 0.5) {
-        let duration = (Math.random() * 3 + 2).toFixed(1);
-        let delay = (Math.random() * 3).toFixed(1);
-        star.style.animation = `twinkle ${duration}s infinite`;
-        star.style.animationDelay = `${delay}s`;
+    function flickerStars() {
+        let flickerCount = Math.floor(stars.length * 0.5); // 50% of the stars will flicker
+        for (let n = 0; n < flickerCount; n++) {
+            let randomStar = stars[Math.floor(Math.random() * stars.length)];
+            let randomOpacity = (Math.random() * 0.9 + 0.1).toFixed(2);
+            let randomScale = (Math.random() * 0.4 + 1).toFixed(2);
+            randomStar.style.opacity = randomOpacity;
+            randomStar.style.transform = `scale(${randomScale})`;       
+        }
     }
+
+    setInterval(flickerStars, 2000); // Flicker every 2 seconds
 
 
     document.body.appendChild(star);
