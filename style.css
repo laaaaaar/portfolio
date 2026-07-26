@@ -107,8 +107,8 @@ footer {
 
 @media (max-width: 600px) {
     img {
-        width: 120 px;
-        height: 120 px;
+        width: 120px;
+        height: 120px;
     }
 
     .intro-content {
