@@ -31,11 +31,6 @@ header {
     padding: 20px 60px;
     margin-left: -60px;
     margin-right: -60px;
-     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
 }
 
 footer {
@@ -46,11 +41,6 @@ footer {
     padding: 20px 60px;
     margin-left: -60px;
     margin-right: -60px;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 10;
 }
 
 .intro-content {
