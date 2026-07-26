@@ -103,3 +103,14 @@ footer {
         opacity: 0;
     }
 }
+
+@media (max-width: 600px) {
+    img {
+        width: 120 px;
+        height: 120 px;
+    }
+
+    .intro-content {
+        gap: 20px;
+    }
+}
