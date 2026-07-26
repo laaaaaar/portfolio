@@ -6,6 +6,7 @@ html {
 }
 
 body {
+    margin: 0;
     padding: 10px 60px;
     background-color: #07070c;
     font-family: 'JetBrains Mono', monospace;
