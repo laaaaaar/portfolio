@@ -1,12 +1,19 @@
 let colors = ["#ffffff", "#ffffff", "#ffffff", "#e9e2a1", "#e591d3"];
 let stars = [];
-let pageHeight = document.body.scrollHeight;
+
+function getPageHeight() {
+    return Math.max(
+        document.body.scrollHeight,
+        document.documentElement.scrollHeight,
+        window.innerHeight
+    );
+}
 
 for (let i = 0; i < 100; i++) {
     let star = document.createElement("div");
     star.classList.add("star");
     star.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
-    star.style.top = Math.floor(Math.random() * pageHeight) + "px";
+    star.style.top = Math.floor(Math.random() * getPageHeight()) + "px";
 
     let randomColor = colors[Math.floor(Math.random() * colors.length)];
     star.style.backgroundColor = randomColor;
@@ -32,7 +39,7 @@ function spawnShootingstar() {
     let shootingStar = document.createElement("div");
     shootingStar.classList.add("shooting-star");
     shootingStar.style.left = Math.random() * window.innerWidth + "px";
-    shootingStar.style.top = Math.random() * (document.body.scrollHeight / 2) + "px";
+    shootingStar.style.top = Math.random() * (getPageHeight() / 2) + "px";
     shootingStar.style.animation = "shoot 1.5s ease-out forwards";
 
     document.body.appendChild(shootingStar);
@@ -43,3 +50,12 @@ function spawnShootingstar() {
 }
 
 setInterval(spawnShootingstar, 5000);
+
+window.addEventListener("resize", () => {
+    const pageHeight = getPageHeight();
+
+    stars.forEach(star => {
+        star.style.left = Math.random() * window.innerWidth + "px";
+        star.style.top = Math.random() * pageHeight + "px";
+    });
+});
