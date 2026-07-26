@@ -1,13 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
 
+html, body {
+    min-height: 100%;
+    margin: 0;
+}
+
 body {
     padding: 10px 60px;
     background-color: #07070c;
     font-family: 'JetBrains Mono', monospace;
     color: white;
     background-image:
-            radial-gradient(circle at 20% 15%, rgba(124, 92, 255, 0.15), transparent 70%),
-            radial-gradient(circle at 80% 70%, rgba(232, 96, 122, 0.12), transparent 70%);
+            radial-gradient(circle 60vw 60vh at 20% 15%, rgba(124, 92, 255, 0.15), transparent 70%),
+            radial-gradient(circle 60vw 60vh at 80% 70%, rgba(232, 96, 122, 0.12), transparent 70%);
     background-repeat: no-repeat;
 }
 
