@@ -7,7 +7,7 @@ for (let i = 0; i < 100; i++) {
     let star = document.createElement("div");
     star.classList.add("star");
     star.style.left = Math.floor(Math.random() * window.innerWidth) + "px";
-    star.style.top = Math.floor(Math.random() * window.innerHeight) + "px";
+    star.style.top = Math.floor(Math.random() * document.body.scrollHeight) + "px";
 
     let randomColor = colors[Math.floor(Math.random() * colors.length)];
     star.style.backgroundColor = randomColor;
@@ -34,7 +34,7 @@ function spawnShootingstar() {
     let shootingStar = document.createElement("div");
     shootingStar.classList.add("shooting-star");
     shootingStar.style.left = Math.random() * window.innerWidth + "px";
-    shootingStar.style.top = Math.random() * (window.innerHeight / 2) + "px"; // Spawn in the upper half of the screen
+    shootingStar.style.top = Math.random() * (document.body.scrollHeight / 2) + "px"; // Spawn in the upper half of the screen
     shootingStar.style.animation = "shoot 1.5s ease-out forwards";
 
     document.body.appendChild(shootingStar);
