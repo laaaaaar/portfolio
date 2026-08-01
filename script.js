@@ -33,7 +33,7 @@ function flickerStars() {
     }
 }
 
-setInterval(flickerStars, 2000);
+setInterval(flickerStars, 1800);
 
 function spawnShootingstar() {
     let shootingStar = document.createElement("div");
