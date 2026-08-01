@@ -59,3 +59,16 @@ window.addEventListener("resize", () => {
         star.style.top = Math.random() * pageHeight + "px";
     });
 });
+
+
+// page selector
+
+let currentPage = window.location.pathname.split("/").pop();
+let navLinks = document.querySelectorAll("nav a");
+
+navLinks.forEach(function(link) {
+    let linkPage = link.getAttribute("href");
+    if (linkPage === currentPage) {
+        link.classList.add("active");
+    }
+}); 

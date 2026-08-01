@@ -132,6 +132,10 @@ section {
     animation: spin 3s linear infinite;
 }
 
+nav a.active {
+    color: #e8607a;
+}
+
 @keyframes spin {
     from { filter: hue-rotate(0deg); }
     to { filter: hue-rotate(360deg); }
