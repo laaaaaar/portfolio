@@ -72,3 +72,13 @@ navLinks.forEach(function(link) {
         link.classList.add("active");
     }
 }); 
+
+window.addEventListener("resize", function() {
+    let newHeight = document.body.scrollHeight;
+    stars.forEach(function(star) {
+        let currentTop = parseFloat(star.style.top);
+        if (currentTop > newHeight) {
+            star.style.top = Math.floor(Math.random() * newHeight) + "px";
+        }
+    });
+});
