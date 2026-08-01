@@ -15,6 +15,9 @@ body {
         radial-gradient(circle at 20% 15%, rgba(124, 92, 255, 0.15), transparent 70%),
         radial-gradient(circle at 80% 70%, rgba(232, 96, 122, 0.12), transparent 70%);
     background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 img {
@@ -32,6 +35,8 @@ header {
     padding: 20px 60px;
     margin-left: -60px;
     margin-right: -60px;
+    padding-left: 90px;
+    padding-right: 90px;
 }
 
 footer {
@@ -42,6 +47,35 @@ footer {
     padding: 20px 60px;
     margin-left: -60px;
     margin-right: -60px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.nav-right {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 22px;
+}
+
+nav a:hover {
+    color:#e8607a;
+}
+
+section {
+    flex: 1;
+    padding: 20px;
 }
 
 .intro-content {
